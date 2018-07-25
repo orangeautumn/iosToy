@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PictureWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tZb-ZA-fvy">
+                                <rect key="frame" x="16" y="98" width="341" height="445.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTd-XQ-3kf">
+                                        <rect key="frame" x="0.0" y="0.0" width="341" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" label="Meal Name"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter Meal Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9i-7W-0Jb">
+                                        <rect key="frame" x="0.0" y="28.5" width="341" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV0-Bs-Bi6">
+                                        <rect key="frame" x="0.0" y="66.5" width="341" height="30"/>
+                                        <state key="normal" title="Set Default Lable text"/>
+                                        <connections>
+                                            <action selector="setDefaultText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="587-Ke-UwD"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYn-jt-r3m">
+                                        <rect key="frame" x="0.0" y="104.5" width="341" height="341"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xYn-jt-r3m" secondAttribute="height" multiplier="1:1" id="ohV-wj-oE0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="q9m-2t-TOI" appends="YES" id="gnk-Va-Fdg"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rV0-Bs-Bi6" firstAttribute="trailing" secondItem="oTd-XQ-3kf" secondAttribute="trailing" id="3Kk-46-DSh"/>
+                                    <constraint firstItem="Z9i-7W-0Jb" firstAttribute="leading" secondItem="oTd-XQ-3kf" secondAttribute="leading" id="XHt-jF-4aN"/>
+                                    <constraint firstItem="Z9i-7W-0Jb" firstAttribute="top" secondItem="oTd-XQ-3kf" secondAttribute="bottom" constant="20" id="acA-Fa-2LA"/>
+                                    <constraint firstItem="oTd-XQ-3kf" firstAttribute="top" secondItem="tZb-ZA-fvy" secondAttribute="top" constant="20" id="anK-LD-etW"/>
+                                    <constraint firstItem="rV0-Bs-Bi6" firstAttribute="top" secondItem="Z9i-7W-0Jb" secondAttribute="bottom" constant="20" id="ceg-dF-ZkU"/>
+                                    <constraint firstItem="Z9i-7W-0Jb" firstAttribute="trailing" secondItem="oTd-XQ-3kf" secondAttribute="trailing" id="mla-uz-QtR"/>
+                                    <constraint firstItem="rV0-Bs-Bi6" firstAttribute="leading" secondItem="oTd-XQ-3kf" secondAttribute="leading" id="n9b-VA-Q0b"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mealName" destination="Z9i-7W-0Jb" id="oj2-QW-SI3"/>
+                        <outlet property="mealNameLabel" destination="oTd-XQ-3kf" id="0hh-TR-82R"/>
+                        <outlet property="photoImageView" destination="xYn-jt-r3m" id="Wgs-IP-aJJ"/>
+                        <outlet property="selectImageFromPhotoLibrary" destination="q9m-2t-TOI" id="cq6-w1-BEB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="q9m-2t-TOI">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="eTx-OY-Q6P"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="352.80000000000001" y="-48.125937031484263"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="341" height="256"/>
+    </resources>
+</document>
