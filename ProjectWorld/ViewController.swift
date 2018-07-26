@@ -69,12 +69,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         
-     /*   mealName.resignFirstResponder()
+     mealName.resignFirstResponder()
         let imageController = UIImagePickerController()
         
         imageController.sourceType = .photoLibrary
         imageController.delegate = self
-        present(imageController, animated: true, completion: nil) */
+        present(imageController, animated: true, completion: nil)  
 
     }
     

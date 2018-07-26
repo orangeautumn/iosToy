@@ -42,14 +42,15 @@
                                             <action selector="setDefaultText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="587-Ke-UwD"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYn-jt-r3m">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYn-jt-r3m">
                                         <rect key="frame" x="0.0" y="104.5" width="341" height="341"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xYn-jt-r3m" secondAttribute="height" multiplier="1:1" id="ohV-wj-oE0"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="q9m-2t-TOI" appends="YES" id="gnk-Va-Fdg"/>
+                                            <outletCollection property="gestureRecognizers" destination="8Dz-nV-pAO" appends="YES" id="huV-PQ-48B"/>
+                                            <outletCollection property="gestureRecognizers" destination="UGS-9W-fkF" appends="YES" id="XMM-kI-I7F"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -70,21 +71,21 @@
                     <connections>
                         <outlet property="mealName" destination="Z9i-7W-0Jb" id="oj2-QW-SI3"/>
                         <outlet property="mealNameLabel" destination="oTd-XQ-3kf" id="0hh-TR-82R"/>
-                        <outlet property="photoImageView" destination="xYn-jt-r3m" id="Wgs-IP-aJJ"/>
-                        <outlet property="selectImageFromPhotoLibrary" destination="q9m-2t-TOI" id="cq6-w1-BEB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="q9m-2t-TOI">
+                <tapGestureRecognizer id="8Dz-nV-pAO">
                     <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="eTx-OY-Q6P"/>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="Nc1-H5-cOD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UGS-9W-fkF">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="Ahs-ds-BQj"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="352.80000000000001" y="-48.125937031484263"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Image" width="341" height="256"/>
-    </resources>
 </document>
